@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Socket Client</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css">
+    <script type="text/javascript" src="/js/socket.io.min.js" defer></script>
+    <script type="text/javascript" src="/js/main.js" defer></script>
+  </head>
+  <body>
+    <h1>Socket Client</h1>
+    <form id="dataForm">
+      <div>
+        <label for="username">Username:</label>
+        <input
+          id="username"
+          placeholder="Enter your username"
+          name="username"
+          type = "text"
+          required
+        />
+      </div>
+      <div>
+        <label for="data">Data:</label>
+        <textarea cols=50 rows=25 id="data" placeholder="Enter your data" name="data" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="status"></div>
+  </body>
+</html>
