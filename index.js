@@ -39,10 +39,6 @@ app.use('/css', express.static(__dirname + 'public/css'));
 app.use('/js', express.static(__dirname + 'public/js'));
 
 app.use(morgan(":remote-addr :method :url :status :res[content-length] - :response-time ms", {stream: myStream} ));
-app.use((req, res, next) => {
-    res.setHeader("Content-Security-Policy", "script-src 'self' 'unsafe-inline';"); // Less secure
-    next();
-});
 app.use(cors({
     origin: '*',
 }));
